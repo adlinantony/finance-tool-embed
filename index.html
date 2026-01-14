@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Calculator App</title>
+    <link rel="stylesheet" href="embed.css">
+</head>
+<body>
+
+    <div id="sip-swp-app-container">
+        </div>
+
+    <script>
+        fetch('embed.css')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sip-swp-app-container').innerHTML = data;
+                
+                // Re-initialize any scripts found in the embed file
+                const scripts = document.getElementById('sip-swp-app-container').getElementsByTagName('script');
+                for (let i = 0; i < scripts.length; i++) {
+                    eval(scripts[i].innerText);
+                }
+            });
+    </script>
+</body>
+</html>
