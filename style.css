@@ -156,8 +156,24 @@
 }
 
 .mode-tab span.icon {
-    font-size: 12px;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
 }
+
+.mode-tab span.icon svg {
+    width: 1.25em;
+    height: 1.25em;
+    fill: currentColor;
+}
+
+.icon svg {
+    width: 1.25em;
+    height: 1.25em;
+    fill: currentColor;
+    vertical-align: text-bottom;
+}
+
 
 .mode-tab.active {
     color: #e5e7eb;
